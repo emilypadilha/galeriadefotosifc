@@ -1,0 +1,195 @@
+/* Altera tudo */
+*{ margin: 0; padding: 0; }
+
+body {
+    background: white;
+    font-family: 'Lato';
+    font-size: 13px;
+    color: #000;
+    height: 100%;
+}
+
+.main {
+    min-height: 100%;
+    position: relative;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.content {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover, a:active {
+    color: black;
+}
+
+/* Menu */
+#menu {
+    background: green;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 25px 0;
+    position: fixed;
+    z-index: 1000;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+#menu a:active {
+    font-weight: bold;
+}
+
+
+/*Cabeçalho*/
+header {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    position: relative;
+}
+
+.box1 img {
+    max-width: 300px;
+}
+
+.box1 {
+    width: 50%;
+    height: 90px;
+    float: left;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.box1 h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 34px;
+    padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+
+/* Box capa dos álbuns */
+.home-albuns {
+    width: 300px;
+    float: left;
+    margin: 20px;
+}
+
+.home-albuns img {
+    border: 1px solid #ccc;
+    height: 230px;
+}
+
+.home-albuns img:hover {
+    cursor: pointer;
+}
+
+.home-albuns h2 {
+    text-align: center;
+    color: #333;
+}
+
+.home-albuns h4 {
+    text-align: center;
+    color: green;
+    background: white;
+    border: 1px solid green;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: -90px;
+    margin-left: 10px
+}
+
+.home-albuns h5 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 90%;
+    text-align: center;
+}
+
+.home-albuns p {
+    text-align: center;
+    font-size: 85%;
+}
+
+.home-albuns a {
+    color: #333;
+}
+
+/* Rodapé */
+#footer-wrapper {
+    width: 100%;
+    position: relative;
+    clear: both;
+    height: 100%;
+    top: 200px;
+}
+
+footer {
+    background: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 45px 0;
+    color: #666;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+}
+
+footer img {
+    width: 200px
+}
+
+.foot00 {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.foot01, .foot02, .foot03 {
+    width: 33.3%;
+    float: left;
+    font-size: 11px;
+}
+
+.foot01 {
+    text-align: right;
+    line-height: 25px;
+}
+
+.foot01 a { margin: 0 10px; }
+.foot01 a:hover { font-weight: bold; }
+
+.foot02 {
+    text-align: center;
+}
+
+.foot03{
+    line-height: 25px;
+}
+
+#alerta {
+    display: none;
+}

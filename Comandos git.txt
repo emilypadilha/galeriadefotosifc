@@ -1,0 +1,16 @@
+> Acessar a pasta do projeto (wamp/www/galeriadefotosifc) e, com o botão direito do mouse,
+entrar em "Git Bash"
+
+> Ao abrir o terminal do Git, digite o seguinte comando para trazer as atualizações do Git:
+git pull origin master
+
+> Após isso, realizar as alterações necessárias nos arquivos em meu computador
+
+> Realizadas as alterações, voltar ao Git Bash e inserir os seguintes comandos, para
+adicionar as alterações ao projeto
+
+git add .
+git commit -m "Alterações dia dd/mm/aaaa"
+git push origin master
+
+> E tá feito o sorvetinho. =)
