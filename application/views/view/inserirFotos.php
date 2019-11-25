@@ -1,5 +1,5 @@
 <form id="form-cadastro-fotos">
-    <p>Inserir <b>fotos</b> ao Álbum</p>
+    <p>Inserir fotos ao álbum</p>
 
     <label for="id_album">Álbum</label>
     <select name="id_album" id="id_album">

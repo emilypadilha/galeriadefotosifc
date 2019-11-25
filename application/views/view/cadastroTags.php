@@ -1,5 +1,5 @@
 <form id="tags-form">
-    <h2>Inserir <b>categorias</b> ao álbum</h2>
+    <h2>Inserir categorias ao álbum</h2>
 
     <select name="album" id="album">
         <option value="0">Selecione um álbum</option>
@@ -8,8 +8,9 @@
         <?php endforeach; ?>
     </select>
     
+    <h4>Selecione a(s) categoria(s) referente(s) ao álbum:</h4>
     <?php foreach($tags as $tag): ?>
-    <input type="checkbox" class="tags" value="<?php echo $tag['id_tag'] ?>" id="<?php echo $tag['id_tag'] ?>" name="tags[]"> <label for="<?php echo $tag['id_tag'] ?>"><?php echo $tag['nome'] ?></label>
+    <input type="checkbox" class="tags" value="<?php echo $tag['id_tag'] ?>" id="<?php echo $tag['id_tag'] ?>" name="tags[]"> <label for="<?php echo $tag['id_tag'] ?>"><?php echo $tag['nome'] ?></label></br>
     <?php endforeach; ?>
     <p id="alerta">Selecione uma tag</p>
     
@@ -17,6 +18,8 @@
 </form>
 
 <form id="new-tag-form">
+    <h4>Caso nenhuma das categorias acima se encaixe, crie uma nova categoria:</h4>
+
     <label for="new-tag">Nova categoria</label>
     <input type="text" id="new-tag" placeholder="Insira o nome da nova categoria" name="nome">
     
