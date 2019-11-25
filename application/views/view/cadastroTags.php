@@ -1,6 +1,8 @@
 <form id="tags-form">
+    <h2>Inserir <b>categorias</b> ao álbum</h2>
+
     <select name="album" id="album">
-        <option value="0">Selecione um album</option>
+        <option value="0">Selecione um álbum</option>
         <?php foreach($albuns as $album): ?>
         <option value="<?php echo $album['id_album'] ?>"><?php echo $album['titulo'] ?></option>
         <?php endforeach; ?>
@@ -15,8 +17,13 @@
 </form>
 
 <form id="new-tag-form">
-    <label for="new-tag">Nova tag</label>
-    <input type="text" id="new-tag" placeholder="Nova tag" name="nome">
+    <label for="new-tag">Nova categoria</label>
+    <input type="text" id="new-tag" placeholder="Insira o nome da nova categoria" name="nome">
     
     <button id="btn-new-tag">Cadastrar</button>
+    
+    <div id="btn-return">
+        <a href="<?php echo base_url('admin/dashboard') ?>">Voltar à Dashboard</a>
+    </div>
+
 </form>

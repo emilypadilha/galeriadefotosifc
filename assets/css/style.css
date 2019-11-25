@@ -1,6 +1,11 @@
 /* Altera tudo */
 *{ margin: 0; padding: 0; }
 
+@font-face {
+  font-family: 'Lato';
+  src: url(https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap);
+}
+
 body {
     background: white;
     font-family: 'Lato';
@@ -61,7 +66,7 @@ a:hover, a:active {
 
 /*Cabeçalho*/
 header {
-    width: 900px;
+    width: 970px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 120px;
@@ -131,12 +136,253 @@ header {
 
 .home-albuns p {
     text-align: center;
-    font-size: 85%;
+    font-size: 90%;
 }
 
 .home-albuns a {
     color: #333;
 }
+
+/* Login */
+#login-form {
+    margin: 0 auto;
+    width: 300px;
+    height: 555px;
+}
+
+#login-form h2{
+    text-align: center;
+    padding: 7px;
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+#login-form input {
+    width: 100%;
+    margin: 5px 0;
+    padding: 7px;
+    font-family: 'Lato';
+}
+
+#btn-login  {
+    width: 318px;
+    background: green;
+    color: white;
+    padding: 7px !important;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Lato';
+}
+
+/* Dashboard */
+#dashboard {
+    width: 500px;
+    margin: auto;
+    height: 485px;
+}
+
+#dashboard p {
+    text-align: center;
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: green;
+}
+
+#dashboard ul {
+    width: 100%;
+    float: left;
+    list-style: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+#dashboard ul li {
+    background: #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#dashboard ul li:hover {
+    background: white;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}
+
+/* Novo Álbum */
+#form-new{
+    width: 500px;
+    margin: auto;
+}
+
+#form-new p{
+    text-align: center;
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: green;
+}
+
+#form-new label {
+    font-family: 'Lato';
+    font-style: italic;
+}
+
+#form-new input {
+    width: 100%;
+    font-family: 'Lato';
+    padding: 7px;
+    margin: 10px 0;
+}
+
+#btn-new {
+    width: 514px;
+    background: green;
+    color: white;
+    padding: 10px;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px auto;
+    font-family: 'Lato';
+}
+
+/* Botão retornar à dashboard */
+#btn-return {
+    width: 300px;
+    text-align: center;
+    background: white;
+    color: green;
+    border: 1px solid green;
+    padding: 7px;
+    text-transform: uppercase;
+    font-size: 90%;
+    margin: 20px auto;
+    font-family: 'Lato';
+}
+
+#btn-return a{
+    color: green;
+}
+
+
+/* Inserir fotos ao álbum */
+#form-cadastro-fotos {
+    width: 500px;
+    margin: auto;
+    height: 555px;
+}
+
+#form-cadastro-fotos p{
+    text-align: center;
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: green;
+}
+
+#form-cadastro-fotos label {
+    font-family: 'Lato';
+    font-style: italic;
+}
+
+#form-cadastro-fotos input, #form-cadastro-fotos select {
+    width: 100%;
+    font-family: 'Lato';
+    padding: 7px;
+    margin: 10px 0;
+}
+
+#btn-new-fotos {
+    width: 514px;
+    background: green;
+    color: white;
+    padding: 10px;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px auto;
+    font-family: 'Lato';
+}
+
+/* Inserir categorias ao álbum */
+#tags-form, #new-tag-form {
+    width: 500px;
+    margin: auto;
+}
+
+#tags-form h2{
+    text-align: center;
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: green;
+    font-weight: normal;
+}
+
+#tags-form p{
+    font-size: 14px;
+    color: red;
+    font-style: normal;
+    text-align: center;
+}
+
+#tags-form label, #new-tag-form label {
+    font-family: 'Lato';
+    font-style: italic;
+}
+
+#tags-form select, #new-tag-form input {
+    width: 100%;
+    font-family: 'Lato';
+    padding: 7px;
+    margin: 10px 0;
+}
+
+/*seleções tags*/
+#tags-form input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+}
+
+
+#btn-new-tag, #btn-cadastrar {
+    width: 514px;
+    background: green;
+    color: white;
+    padding: 10px;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px auto;
+    font-family: 'Lato';
+}
+
+.tags input {
+    float: left;
+    background: red;
+}
+
+/*
+
+<?php foreach($tags as $tag): ?>
+    <input type="checkbox" class="tags" value="<?php echo $tag['id_tag'] ?>" id="<?php echo $tag['id_tag'] ?>" name="tags[]"> <label for="<?php echo $tag['id_tag'] ?>"><?php echo $tag['nome'] ?></label>
+    <?php endforeach; ?>
+    <p id="alerta">Selecione uma tag</p>
+*/
 
 /* Rodapé */
 #footer-wrapper {
