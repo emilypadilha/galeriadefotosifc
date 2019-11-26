@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Galeria de Fotos IFC - Campus Camboriú</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap" rel="stylesheet"/>   
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap" rel="stylesheet"/> 
+    
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css') ?>">
 </head>
 
