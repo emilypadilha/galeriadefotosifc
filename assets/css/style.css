@@ -68,7 +68,7 @@ a:hover, a:active {
 
 /*Cabeçalho*/
 header {
-    width: 970px;
+    width: 1020px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 120px;
@@ -95,6 +95,75 @@ header {
 	padding-bottom: 24px;
 }
 
+/* Filtros para Pesquisas */
+#forms-filtros {
+    margin: 0 auto;
+    display: inline;
+}
+
+#form-filtro-titulo input, #form-filtro-data input, #form-filtro-tag select {
+    border: 1px solid #ccc;
+    font-family: 'Lato';
+    font-style: italic;
+    padding: 10px;
+    width: 305px;
+    margin: 0 10px 50px;
+    float: left;
+}
+
+#form-filtro-titulo input, #form-filtro-data input{
+    height: 25px;
+}
+
+#form-filtro-tag select {
+    height: 46px;
+}
+
+/* Página interna álbuns */
+.conteudo {
+    width: 1020px;
+    text-align: center;
+}
+
+.conteudo h1 { /*título*/
+    text-align: center; 
+    margin-bottom: 10px;
+}
+
+.conteudo h4 { /*data*/
+    text-align: center;
+    font-weight: normal;
+    display: inline;
+    margin: 0 10px;
+}
+
+.conteudo ul { 
+    text-align: center;
+    margin: 20px auto;
+}
+
+.conteudo ul li { /*categorias*/
+    list-style: none;
+    padding: 3px 5px;
+    margin: 0 5px;
+    color: green;
+    border: 1px solid green;
+    display: inline;
+    text-transform: uppercase;
+    font-size: 85%;
+    text-align: center;
+}
+
+.conteudo h5 {
+    margin-top: 5px;
+}
+
+.conteudo h6 {
+    font-weight: normal;
+    text-align: center;
+    margin-top: -10px;
+    font-size: 11px;
+}
 
 /* Box capa dos álbuns */
 .home-albuns {
@@ -104,8 +173,7 @@ header {
 }
 
 .home-albuns img {
-    border: 1px solid #ccc;
-    height: 230px;
+    height: auto;
 }
 
 .home-albuns img:hover {
@@ -115,18 +183,20 @@ header {
 .home-albuns h2 {
     text-align: center;
     color: #333;
+    margin: 10px 0;
+    line-height: 1.5em;
+    font-size: 18px;
 }
 
+/*data do album na home*/
 .home-albuns h4 {
     text-align: center;
-    color: green;
-    background: white;
-    border: 1px solid green;
+    color: white;
+    background: green;
     padding: 5px;
-    border-radius: 10px;
-    position: absolute;
-    margin-top: -90px;
-    margin-left: 10px
+    display: inline;
+    position: relative;
+    z-index: 1000;
 }
 
 .home-albuns h5 {
@@ -139,17 +209,38 @@ header {
 .home-albuns p {
     text-align: center;
     font-size: 90%;
+    font-style: italic;
 }
 
 .home-albuns a {
     color: #333;
 }
 
+/*categorias do album*/
+#albuns ul {           
+    width: 300px;
+    margin: 15px auto;
+    text-align: center;
+}
+
+#albuns ul li{
+    list-style: none;
+    padding: 3px 5px;
+    margin: 10px 5px;
+    color: green;
+    border: 1px solid green;
+    text-transform: uppercase;
+    font-size: 85%;
+    text-align: center;
+    display: inline;
+    z-index: 1000;
+}
+
 /* Login */
 #login-form {
     margin: 0 auto;
     width: 300px;
-/*    height: 555px;*/
+    height: 485px;
 }
 
 #login-form h2{
@@ -186,7 +277,7 @@ header {
 #dashboard {
     width: 500px;
     margin: auto;
-    height: 485px;
+    height: 415px;
 }
 
 #dashboard p {
@@ -281,7 +372,7 @@ header {
 #form-cadastro-fotos {
     width: 500px;
     margin: auto;
-    height: 555px;
+    height: 485px;
 }
 
 #form-cadastro-fotos p{
@@ -380,18 +471,28 @@ header {
     font-family: 'Lato';
 }
 
-.tags input {
-    float: left;
-    background: red;
+
+/*Rodapé fictício*/
+.paginacao {
+    width: 1020px;
+    margin: 0px auto;
+    display: inline-block;
+    text-align: center;
 }
 
-/*
+.paginacao ul li {
+    width: 30px;
+    height: 30px;
+    padding: 7px 10px;
+    border: 1px solid grey;
+    color: #333;
+    border-radius: 40px;
+    list-style: none;
+    display: inline;
+    margin: 0 5px;
+    cursor: pointer;
+}
 
-<?php foreach($tags as $tag): ?>
-    <input type="checkbox" class="tags" value="<?php echo $tag['id_tag'] ?>" id="<?php echo $tag['id_tag'] ?>" name="tags[]"> <label for="<?php echo $tag['id_tag'] ?>"><?php echo $tag['nome'] ?></label>
-    <?php endforeach; ?>
-    <p id="alerta">Selecione uma tag</p>
-*/
 
 /* Rodapé */
 #footer-wrapper {

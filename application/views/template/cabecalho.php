@@ -28,7 +28,7 @@
 
     <header>
         <div class="box1">
-            <img src="<?php echo base_url('assets/imagens/logo-ifc.png') ?>" alt="Logotipo do Instituto Federal Catarinense - Campus Camboriú" />
+            <a href="<?php echo base_url('visitante/home') ?>"><img src="<?php echo base_url('assets/imagens/logo-ifc.png') ?>" alt="Logotipo do Instituto Federal Catarinense - Campus Camboriú" /></a>
         </div>
 
         <div class="box1">

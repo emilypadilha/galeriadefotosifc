@@ -5,10 +5,10 @@
             <li>Criar novo álbum</li>
         </a>
         <a href="<?php echo base_url('admin/fotos') ?>">
-            <li>Inserir fotos no álbum</li>
+            <li>Inserir fotos ao álbum</li>
         </a>
         <a href="<?php echo base_url('admin/tags') ?>">
-            <li>Inserir categorias no álbum</li>
+            <li>Inserir categorias ao álbum</li>
         </a>
     </ul>
 

@@ -53,7 +53,7 @@ $(document).ready(function () {
     function gerarLinha(value) {
         console.log(!$('#lista-tags-' + value.id_album).parentNode)
         if (!$('#lista-tags-' + value.id_album).parentNode) {
-            linha += '<a href="album/' + value.id_album + '"><div class="home-albuns"><img style="width: 100%" src="../assets/imagens/' + value.capa + '" alt=""><h2>' + value.titulo + '</h2><h4>' + value.data + '</h4><p>Local: ' + value.local + '</p><ul id="lista-tags-' + value.id_album + '"></ul></div></a>';
+            linha += '<a href="album/' + value.id_album + '"><div class="home-albuns"><img style="width: 100%" src="../assets/imagens/' + value.capa + '" alt=""><h2>' + value.titulo + '</h2><p>' + value.data + ' | Local: ' + value.local + '</p><ul id="lista-tags-' + value.id_album + '"></ul></div></a>';
             $.getJSON(base_url + 'visitante/tags/' + value.id_album, function (result) {
                 for (var i = 0; i < result.length; i++) {
                     $('#lista-tags-' + result[i].id_album).append('<li>' + result[i].nome + '</li>');
