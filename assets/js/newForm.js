@@ -56,10 +56,10 @@ $(document).ready(function () {
             $('#div-novo-album').html('');
 
             if (array['criado'] == 'true') {
-                $('#div-novo-album').html('<p>Album cadastrado com sucesso!</p>');
+                $('#div-novo-album').html('<p>Álbum cadastrado com sucesso!</p>');
                 console.log(array['criado']);
             } else {
-                $('#div-novo-album').html('<p>Falha ao cadastrar fotos!</p>');
+                $('#div-novo-album').html('<p>Falha ao cadastrar fotos.</p>');
                 console.log(array['criado']);
             }
         }).fail(function (result) {

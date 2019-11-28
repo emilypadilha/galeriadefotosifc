@@ -562,3 +562,9 @@ footer img {
 #alerta {
     display: none;
 }
+
+/*cadastrado com sucesso*/
+#div-form-fotos p, #div-tag-form p, #div-novo-album p{
+    text-align: center;
+    font-style: italic;
+}

@@ -61,7 +61,7 @@ $(document).ready(function () {
             if ( data.criado == 'true' ) {
                 $('#div-tag-form').html('<p>Categorias cadastradas com sucesso!</p>');
             } else {
-                $('#div-tag-form').html('<p>Falha ao cadastrar categorias</p>');
+                $('#div-tag-form').html('<p>Falha ao cadastrar categorias.</p>');
             }
         })
     }
