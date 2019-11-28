@@ -5,7 +5,7 @@ de cada álbum, portanto, para cada item (foreach) será gerado o HTML abaixo - 
 com o álbum
 
 -->
-<div class="content">
+<div class="content" id="albuns-fundo">
     <div id="forms-filtros">
         <form id="form-filtro-titulo">
             <input type="text" id="nome-album" placeholder="Busca por palavra-chave" name="nome-album">

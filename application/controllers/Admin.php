@@ -51,24 +51,24 @@ class Admin extends CI_Controller {
         
         if (isset($titulo) && !file_exists('assets/imagens/'.$titulo)) {
             if ( mkdir('assets/imagens/'.$titulo, 0777, true) ) {
-                echo json_encode('Pasta '.$titulo.' criada!', JSON_UNESCAPED_UNICODE);
+//                echo json_encode('Pasta '.$titulo.' criada!', JSON_UNESCAPED_UNICODE);
             } else {
-                echo json_encode('Erro ao criar pasta '.$titulo, JSON_UNESCAPED_UNICODE);
+//                echo json_encode('Erro ao criar pasta '.$titulo, JSON_UNESCAPED_UNICODE);
             }
             
             if ( mkdir('assets/imagens/'.$titulo.'/capa', 0777, true) ) {
-                echo json_encode('Pasta '.$titulo.'/capa criada!', JSON_UNESCAPED_UNICODE);
+//                echo json_encode('Pasta '.$titulo.'/capa criada!', JSON_UNESCAPED_UNICODE);
             } else {
-                echo json_encode('Erro ao criar pasta '.$titulo.'/capa', JSON_UNESCAPED_UNICODE);
+//                echo json_encode('Erro ao criar pasta '.$titulo.'/capa', JSON_UNESCAPED_UNICODE);
             }
             
             if ( mkdir('assets/imagens/'.$titulo.'/fotos', 0777, true) ) {
-                echo json_encode('Pasta '.$titulo.'/fotos criada!', JSON_UNESCAPED_UNICODE);
+//                echo json_encode('Pasta '.$titulo.'/fotos criada!', JSON_UNESCAPED_UNICODE);
             } else {
-                echo json_encode('Erro ao criar pasta '.$titulo.'/fotos', JSON_UNESCAPED_UNICODE);
+//                echo json_encode('Erro ao criar pasta '.$titulo.'/fotos', JSON_UNESCAPED_UNICODE);
             }
         } else {
-            echo json_encode("Pasta já existe!", JSON_UNESCAPED_UNICODE);
+//            echo json_encode("Pasta já existe!", JSON_UNESCAPED_UNICODE);
             exit;
         }
         
@@ -76,12 +76,12 @@ class Admin extends CI_Controller {
             $pathUpload = 'assets/imagens/'.$titulo.'/capa/'.basename($nameSave);
             if ( move_uploaded_file($capa['tmp_name'], $pathUpload) ) {
                 if ( $this->album->setAlbum($titulo, $local, $data, $pathDB) ) {
-                    echo json_encode("Novo album: $titulo cadastrado com sucesso!", JSON_UNESCAPED_UNICODE);
+                    echo json_encode(array('criado' => 'true'));
                 } else {
-                    echo json_encode("Falha ao criar novo album!", JSON_UNESCAPED_UNICODE);
+                    echo json_encode(array('criado' => 'false'));
                 }
             } else {
-                echo json_encode("Falha ao fazer upload da capa!", JSON_UNESCAPED_UNICODE);
+                echo json_encode(array('criado' => 'false'));
             }
         }
     }
@@ -102,10 +102,16 @@ class Admin extends CI_Controller {
         
         for ( $i = 0; $i<count($tags); $i++ ) {
             if ( $this->album->setTagAlbum($album, $tags[$i]) ) {
-                echo json_encode("Tag cadastrada no album com sucesso!", JSON_UNESCAPED_UNICODE);
+                $cadastro = true;
             } else {
-                echo json_encode("Falha ao cadastrar tag no album!", JSON_UNESCAPED_UNICODE);
+                $cadastro = false;
             }
+        }
+        
+        if ( $cadastro ) {
+            echo json_encode(array('criado' => 'true'));
+        } else {
+            echo json_encode(array('criado' => 'false'));
         }
     }
     
@@ -145,12 +151,12 @@ class Admin extends CI_Controller {
             
             if ( move_uploaded_file($fotos['tmp_name'][$i], $pathUpload) ) {
                 if ( $this->album->setFotos($id_album, $pathDB) ) {
-                    echo json_encode(array('salva' => 'true'));
+                    echo json_encode(array('criado' => 'true'));
                 } else {
-                    echo json_encode(array('salva' => 'false'));
+                    echo json_encode(array('criado' => 'false'));
                 }
             } else {
-                echo json_encode("Imagem não salva na pasta!", JSON_UNESCAPED_UNICODE);
+                echo json_encode(array('criado' => 'false'));
             }
                 
         }

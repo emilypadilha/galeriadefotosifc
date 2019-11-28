@@ -98,7 +98,7 @@ header {
 /* Filtros para Pesquisas */
 #forms-filtros {
     margin: 0 auto;
-    display: inline;
+    display: flex;
 }
 
 #form-filtro-titulo input, #form-filtro-data input, #form-filtro-tag select {
@@ -166,6 +166,16 @@ header {
 }
 
 /* Box capa dos álbuns */
+#albuns-fundo {
+    display: flex;
+    flex-direction: column;
+}
+
+#albuns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .home-albuns {
     width: 300px;
     float: left;
@@ -221,6 +231,8 @@ header {
     width: 300px;
     margin: 15px auto;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #albuns ul li{
@@ -232,7 +244,8 @@ header {
     text-transform: uppercase;
     font-size: 85%;
     text-align: center;
-    display: inline;
+    display: flex;
+    align-items: center;
     z-index: 1000;
 }
 

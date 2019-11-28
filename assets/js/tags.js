@@ -56,7 +56,13 @@ $(document).ready(function () {
             url: base_url+'Admin/cadastrarTags',
             data: $('#tags-form').serialize()
         }).done(function (data) {
-            console.log(data)
+            $('#div-tag-form').html('');
+            
+            if ( data.criado == 'true' ) {
+                $('#div-tag-form').html('<p>Categorias cadastradas com sucesso!</p>');
+            } else {
+                $('#div-tag-form').html('<p>Falha ao cadastrar categorias</p>');
+            }
         })
     }
     

@@ -51,10 +51,20 @@ $(document).ready(function () {
             contentType: false, // desabilitar o cabeçalho "Content-Type"
             cache: false, // desabilitar o "cache"
             async: false
-        }).done(function(data) {
-            console.log(data);
-        }).fail(function(data) {
-            console.log(data);
+        }).done(function(result) {
+            var array = JSON.parse(result);
+
+            $('#div-novo-album').html('');
+
+            if (array['criado'] == 'true') {
+                $('#div-form-fotos').html('<p>Fotos cadastradas com sucesso!</p>');
+                console.log(array['criado']);
+            } else {
+                $('#div-form-fotos').html('<p>Falha ao cadastrar fotos!</p>');
+                console.log(array['criado']);
+            }
+        }).fail(function(result) {
+            console.log(result);
         });
     }
     

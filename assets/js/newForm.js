@@ -40,20 +40,32 @@ $(document).ready(function () {
     function enviarForm() {
         var formulario = document.getElementById('form-new');
         var form = new FormData(formulario);
-        
+
         $.ajax({
-            type: 'POST', 
+            type: 'POST',
             mimeType: 'multipart/form-data',
-            url: base_url+"admin/novoAlbum",
+            url: base_url + "admin/novoAlbum",
             data: form,
             processData: false, // impedir que o jQuery tranforma a "data" em querystring
             contentType: false, // desabilitar o cabeçalho "Content-Type"
             cache: false, // desabilitar o "cache"
             async: false
-        }).done(function(data) {
-            console.log(data);
-        }).fail(function(data) {
-            console.log(data);
+        }).done(function (result) {
+            var array = JSON.parse(result);
+
+            $('#div-novo-album').html('');
+
+            if (array['criado'] == 'true') {
+                $('#div-novo-album').html('<p>Album cadastrado com sucesso!</p>');
+                console.log(array['criado']);
+            } else {
+                $('#div-novo-album').html('<p>Falha ao cadastrar fotos!</p>');
+                console.log(array['criado']);
+            }
+        }).fail(function (result) {
+            var array = JSON.parse(result);
+            
+            console.log(array['criado']);
         });
     }
 
