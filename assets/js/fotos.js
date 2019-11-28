@@ -54,7 +54,7 @@ $(document).ready(function () {
         }).done(function(result) {
             var array = JSON.parse(result);
 
-            $('#div-novo-album').html('');
+            $('#div-form-fotos').html('');
 
             if (array['criado'] == 'true') {
                 $('#div-form-fotos').html('<p>Fotos cadastradas com sucesso!</p>');

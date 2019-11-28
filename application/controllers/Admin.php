@@ -150,15 +150,17 @@ class Admin extends CI_Controller {
             $pathUpload = 'assets/imagens/'.$dados['album'][0]['titulo'].'/fotos/'.basename($nameSave);
             
             if ( move_uploaded_file($fotos['tmp_name'][$i], $pathUpload) ) {
-                if ( $this->album->setFotos($id_album, $pathDB) ) {
-                    echo json_encode(array('criado' => 'true'));
-                } else {
-                    echo json_encode(array('criado' => 'false'));
-                }
+                $cadastro = true;
             } else {
-                echo json_encode(array('criado' => 'false'));
+                $cadastro = false;
             }
-                
+                    
+        }
+        
+        if ( $cadastro ) {
+            echo json_encode(array('criado' => 'true'));
+        } else {
+            echo json_encode(array('criado' => 'false'));
         }
     }
     
