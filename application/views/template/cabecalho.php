@@ -19,7 +19,7 @@
         <a href="http://www.camboriu.ifc.edu.br/estude-no-ifc/" target="_blank">Estude no IFC</a>
         <a href="https://issuu.com/institutofederalcatarinense/docs/ifc_guiadecursos">Conheça Nossos Cursos</a>
         <?php if(isset($this->session->id_usuario)): ?>
-        <a href="<?php echo base_url('admin/dashboard') ?>">Dashboard</a>
+        <a href="<?php echo base_url('admin/dashboard') ?>">Painel Administrativo</a>
         <a href="<?php echo base_url('login/sair') ?>">Sair</a>
         <?php endif; ?>
         
