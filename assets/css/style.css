@@ -44,7 +44,7 @@ a:hover, a:active {
     left: 0;
     padding: 25px 0;
     position: fixed;
-    z-index: 1000;
+    z-index: 9999;
     text-transform: uppercase;
     color: white;
     font-size: 12px;
@@ -68,7 +68,7 @@ a:hover, a:active {
 
 /*Cabeçalho*/
 header {
-    width: 1020px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 120px;
@@ -248,7 +248,7 @@ header {
     text-align: center;
     display: flex;
     align-items: center;
-    z-index: 1000;
+    z-index: 2;
 }
 
 /* Login */
@@ -569,4 +569,11 @@ footer img {
 #div-form-fotos p, #div-tag-form p, #div-novo-album p{
     text-align: center;
     font-style: italic;
+}
+
+
+@media only screen and (max-device-width: 900px) {
+    #menu, header {
+        width: 100%;
+    }
 }

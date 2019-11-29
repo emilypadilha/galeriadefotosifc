@@ -59,7 +59,7 @@ $(document).ready(function () {
                 $('#div-novo-album').html('<p>Álbum cadastrado com sucesso!</p>');
                 console.log(array['criado']);
             } else {
-                $('#div-novo-album').html('<p>Falha ao cadastrar fotos.</p>');
+                $('#div-novo-album').html('<p>Falha ao cadastrar álbum.</p>');
                 console.log(array['criado']);
             }
         }).fail(function (result) {

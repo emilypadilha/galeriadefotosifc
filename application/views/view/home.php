@@ -31,9 +31,9 @@ com o álbum
         <a href="<?php echo base_url('Visitante/album/'.$album['id_album']) ?>">
             <div class="home-albuns">
                 <h4><?php echo $album['data'] ?></h4>
-                <img style="width: 100%" src="<?php echo base_url('assets/imagens/'.$album['capa']) ?>" alt="Logotipo do Insituto Federal Catarinense - Campus Camboriú">
+                <img style="width: 100%; height: 230px"  src="<?php echo base_url('assets/imagens/'.$album['capa']) ?>" alt="Logotipo do Insituto Federal Catarinense - Campus Camboriú">
                 <h2><?php echo $album['titulo'] ?></h2>
-                <p><img src="<?php echo base_url('assets/imagens/local.png') ?>" width="10px"> <?php echo $album['local'] ?></p>
+                <p><img src="<?php echo base_url('assets/imagens/local.png') ?>" width="10px" height="10px"> <?php echo $album['local'] ?></p>
                 <ul>
                     <?php
                     foreach($tagAlbuns as $tagAlbum){

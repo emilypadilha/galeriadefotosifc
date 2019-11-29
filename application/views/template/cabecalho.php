@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Galeria de Fotos IFC - Campus Camboriú</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap" rel="stylesheet"/> 
     
@@ -26,7 +27,8 @@
         <a href="<?php echo base_url('login/login') ?>">Acesso Restrito</a>
         <?php endif; ?>
     </div>
-
+    
+    <div class="main">
     <header>
         <div class="box1">
             <a href="<?php echo base_url('visitante/home') ?>"><img src="<?php echo base_url('assets/imagens/logo-ifc.png') ?>" alt="Logotipo do Instituto Federal Catarinense - Campus Camboriú" /></a>
@@ -36,4 +38,3 @@
             <h1>Galeria de Fotos</h1>
         </div>
     </header>
-    <div class="main">
