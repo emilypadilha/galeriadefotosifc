@@ -150,7 +150,11 @@ class Admin extends CI_Controller {
             $pathUpload = 'assets/imagens/'.$dados['album'][0]['titulo'].'/fotos/'.basename($nameSave);
             
             if ( move_uploaded_file($fotos['tmp_name'][$i], $pathUpload) ) {
-                $cadastro = true;
+                if ( $this->album->setFotos($id_album, $pathDB) ) {
+                    $cadastro = true;
+                } else {
+                    $cadastro = false;
+                }
             } else {
                 $cadastro = false;
             }
